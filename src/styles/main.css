@@ -4,8 +4,10 @@
 /                                                                                                     /
 /////////////////////////////////////////////////////////////////////////////////////////////////////*/
 
-/* @import "normalize.css"; */
-/* @import "resets/_minimal.reset.css"; */
+/* 
+@import "normalize.css";
+@import "resets/_minimal.reset.css"; 
+*/
 
 /* OPTIONAL ///////////////////////////////////////////////////////////////////////////////////////////
 /                                                                                                     /
@@ -32,12 +34,14 @@
 /////////////////////////////////////////////////////////////////////////////////////////////////////*/
 
 /* MEDIA QUERIES */
-/* @import "mixins/media/_@small.mixin.css"; */
-/* @import "mixins/media/_@medium.mixin.css"; */
+/* 
+@import "mixins/media/_@small.mixin.css"; 
+@import "mixins/media/_@medium.mixin.css"; 
 @import "mixins/media/_@large.mixin.css";
-/* @import "mixins/media/_@xlarge.mixin.css"; */
-/* @import "mixins/media/_@lo-dpi.mixin.css"; */
-/* @import "mixins/media/_@hi-dpi.mixin.css"; */
+@import "mixins/media/_@xlarge.mixin.css";
+@import "mixins/media/_@lo-dpi.mixin.css";
+@import "mixins/media/_@hi-dpi.mixin.css"; 
+*/
 
 /* BLEED */
 /* @import "mixins/bleed/_bleed-image.mixin.css"; */

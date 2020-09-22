@@ -1,0 +1,19 @@
+{
+    "workbench.colorCustomizations": {
+        "activityBar.background": "#2E1C74",
+        "titleBar.activeBackground": "#4128A3",
+        "titleBar.activeForeground": "#FBFBFE"
+    },
+    "css.validate": false,
+    "less.validate": false,
+    "scss.validate": false,
+    "files.associations": {
+        "*.css": "scss"
+    },
+    "cSpell.ignoreWords": [
+        "plugable"
+    ],
+    "json": {
+        "json.maxitemsComputed": 15000
+    }
+}

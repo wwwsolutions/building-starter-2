@@ -1,0 +1,16 @@
+node_modules/**
+build-utils/**
+dist/**
+src/app/**
+src/assets/**
+src/presets/**
+src/templates/**
+src/vendors/**
+
+src/styles/main.css
+src/styles/generated/**
+src/styles/grids/**
+src/styles/mixins/**
+src/styles/resets/**
+src/styles/utils/**
+src/styles/variables/**

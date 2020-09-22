@@ -9,6 +9,8 @@ import postcssSimpleVars from '../postcss-plugins/postcssSimpleVars';
 import postcssNested from '../postcss-plugins/postcssNested';
 // import postcssAutoprefixer from '../postcss-plugins/postcssAutoprefixer'; // >>> instead using autoprefixer from postcss-preset-env
 import postcssPresetEnv from '../postcss-plugins/postcssPresetEnv';
+import postcssMixins from '../postcss-plugins/postcssMixins';
+
 
 
 const POSTCSSLoader = mode => ({
@@ -33,8 +35,7 @@ const POSTCSSLoader = mode => ({
             postcssMap,
 
             // TODO: ???? FIX IT
-            // https://www.npmjs.com/package/postcss-mixins
-            // 'postcss-mixins',
+            postcssMixins,
 
             postcssSimpleVars,
 

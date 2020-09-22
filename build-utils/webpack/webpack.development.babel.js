@@ -28,6 +28,7 @@ module.exports = () => {
       {
         // omit for defaults
         port: 3001,
+        host: '0.0.0.0', // for testing on other devices on the LAN
 
         // more examples
         // host: process.env.HOST,

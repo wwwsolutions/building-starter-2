@@ -145,7 +145,7 @@ body {
 $dir: top;
 $column: 200px;
 $mainBlue: #2f5572;
-$mainRed: #af0000;
+$mainRed: #aa0000;
 
 .test {
   background: $mainBlue;
@@ -190,7 +190,7 @@ $mainRed: #af0000;
 @custom-selector :--heading h1, h2, h3, h4, h5, h6;
 
 :root {
-  --mainColor: #12345678;
+  --mainColor: #4555d5;
 }
 
 body {

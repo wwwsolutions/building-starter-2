@@ -1,0 +1,262 @@
+/* OPTIONAL ///////////////////////////////////////////////////////////////////////////////////////////
+/                                                                                                     /
+/  > RESETS                                                                                           /
+/                                                                                                     /
+/////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+/* @import "normalize.css"; */
+/* @import "resets/_minimal.reset.css"; */
+
+/* OPTIONAL ///////////////////////////////////////////////////////////////////////////////////////////
+/                                                                                                     /
+/  > VENDOR CSS FRAMEWORKS                                                                            /
+/                                                                                                     /
+/////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+/* @import "../../vendors/css/tachyons/_tachyons.css"; */
+
+/* OPTIONAL ///////////////////////////////////////////////////////////////////////////////////////////
+/                                                                                                     /
+/  > GENERATED                                                                                        /
+/  [AUTOMATICALLY GENERATED STYLE SHEETS FOR ICONS SPRITE VIA GULP TASK.]                              /
+/  GULP:SPRITES                                                                                       /
+/                                                                                                     /
+/////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+/* @import "generated/_sprite"; */
+
+/* OPTIONAL ///////////////////////////////////////////////////////////////////////////////////////////
+/                                                                                                     /
+/  > MIXINS                                                                                           /
+/                                                                                                     /
+/////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+/* MEDIA QUERIES */
+/* @import "mixins/media/_@small.mixin.css"; */
+/* @import "mixins/media/_@medium.mixin.css"; */
+@import "mixins/media/_@large.mixin.css";
+/* @import "mixins/media/_@xlarge.mixin.css"; */
+/* @import "mixins/media/_@lo-dpi.mixin.css"; */
+/* @import "mixins/media/_@hi-dpi.mixin.css"; */
+
+/* BLEED */
+/* @import "mixins/bleed/_bleed-image.mixin.css"; */
+/* @import "mixins/bleed/_bleed-container.mixin.css"; */
+
+/* MANDATORY /////////////////////////////////////////////////////////////////////////////////////////
+/                                                                                                    /
+/  > UTILITIES                                                                                       /
+/  SELECT UTILITY CLASSES SETS                                                                       /
+/                                                                                                    /
+////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+/* @import "utils/_@utils.css"; */
+/* @import "utils/_margin.utils.css"; */
+/* @import "utils/_transition.utils.css"; */
+/* @import "utils/_scale.utils.css"; */
+/* @import "utils/_opacity.utils.css"; */
+
+/* MANDATORY /////////////////////////////////////////////////////////////////////////////////////////
+/                                                                                                    /
+/  > BASE                                                                                            /
+/  SET UP PROJECT'S GLOBAL/SHARED/COMMON STYLES.                                                     /
+/                                                                                                    /
+////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+/* > VARIABLES */
+/* @import "base/variables@simple/_colors.variables.css"; */
+/* @import "base/variables@simple/_font.variables.css"; */
+/* @import "base/variables@simple/_grid.variables.css"; */
+/* @import "base/variables@root/_custom-properties.variables.css"; */
+
+/* > LAYOUTS */
+/* @import "base/layouts/_container.layout"; */
+/* @import "base/layouts/_section.layout"; */
+
+/* > ANIMATIONS */
+/* @import "base/animations/_animation.definition.css"; */
+/* @import "base/animations/move-in/_move-in-bottom.animation.css"; */
+/* @import "base/animations/move-in/_move-in-left.animation.css"; */
+/* @import "base/animations/move-in/_move-in-right.animation.css"; */
+
+/*
+  > SELECT ONE OF RESPONSIVE DESIGN STRATEGIES
+  > CORRESPONDING TO [build-utils/webpack/postcss/postcss.config.js	--> "postcss-map" --> SETTINGS]
+*/
+/* @import "base/@desktop-first/_typography@desktop-first.css"; */
+/* @import "base/@desktop-first/_common@desktop-first.css"; */
+/*
+@import "base/@mobile-first-strategy/_typography@mobile-first-strategy.css";
+@import "base/@mobile-first-strategy/_common@mobile-first-strategy.css";
+*/
+
+/* OPTIONAL ///////////////////////////////////////////////////////////////////////////////////////////
+/                                                                                                     /
+/  > VENDOR GRIDS                                                                                     /
+/                                                                                                     /
+/////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+/* @import "grids/_lost.grid"; */
+/* @import "grids/_custom.grid"; */
+
+/* MANDATORY //////////////////////////////////////////////////////////////////////////////////////////
+/                                                                                                     /
+/  > COMPONENTS                                                                                       /
+/  REUSABLE/PLUGABLE BLOCKS                                                                           /
+/                                                                                                     /
+/////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+/* @import "./components/_header.css"; */
+/* @import "./components/_features.css"; */
+/* @import "./components/_footer.css"; */
+
+body {
+  background: blueviolet;
+
+  /* testing 'postcss-assets' */
+  background: resolve("test.jpg");
+}
+
+/* testing 'postcss-map' */
+@media (min-width: map(breakpoints, standard)) {
+  .test {
+    width: 100%;
+    background-color: red;
+  }
+}
+
+/* @mixin atLarge {
+  @map font-size atLarge;
+  @map line-height atLarge;
+  content: "atLarge@desktop-first";
+} */
+
+/* @media (min-width: 321px) {
+  .test {
+    width: 100%;
+  }
+} */
+
+/* testing 'postcss-simple-vars' */
+$dir: top;
+$column: 200px;
+$mainBlue: #2f5572;
+$mainRed: #af0000;
+
+.test {
+  background: $mainBlue;
+  width: calc(4 * $column);
+  margin-$(dir): 10px;
+}
+
+/* testing 'postcss-nested' */
+.phone {
+  &__title {
+    width: 200px;
+    background-color: red;
+    @media (max-width: 500px) {
+      width: auto;
+    }
+    body.is_dark & {
+      color: white;
+    }
+  }
+  img {
+    display: block;
+  }
+}
+
+.title {
+  font-size: var(--font);
+
+  @at-root html {
+    --font: 50px;
+  }
+}
+
+.large-hero {
+  h2 {
+    color: $mainRed;
+    font-size: var(--font);
+  }
+}
+
+/* testing 'postcss-preset-env' */
+@custom-media --viewport-medium (width <= 50rem);
+@custom-selector :--heading h1, h2, h3, h4, h5, h6;
+
+:root {
+  --mainColor: #12345678;
+}
+
+body {
+  color: var(--mainColor);
+  font-family: system-ui;
+  overflow-wrap: break-word;
+}
+
+:--heading {
+  @media (--viewport-medium) {
+    margin-block: 0;
+  }
+}
+
+a {
+  color: rgb(0 0 100% / 90%);
+
+  &:hover {
+    color: rebeccapurple;
+  }
+}
+
+/* becomes */
+
+:root {
+  --mainColor: rgba(18, 52, 86, 0.47059);
+}
+
+body {
+  color: rgba(18, 52, 86, 0.47059);
+  color: var(--mainColor);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Droid Sans,
+    Helvetica Neue;
+  word-wrap: break-word;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+}
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+  }
+}
+
+@media (max-width: 50rem) {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}
+
+a {
+  color: rgba(0, 0, 255, 0.9);
+}
+
+a:hover {
+  color: #639;
+}

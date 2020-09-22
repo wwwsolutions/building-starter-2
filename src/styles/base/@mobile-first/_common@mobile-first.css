@@ -1,0 +1,43 @@
+/* @MOBILE-FIRST-STRATEGY
+
+  > WARNING!
+  > ORDER OF BREAKPOINTS IS IMPORTANT!
+
+    [default]
+    atSmall
+    atMedium
+    atLarge
+    atXLarge
+    ...
+
+*/
+
+::selection {
+  /*
+  background-color: $color-primary;
+  background-color: var(--color-primary);
+  color: $color-white;
+  color: var(--color-white);
+  */
+}
+
+body {
+
+  /* DEFAULT */
+
+  @mixin atSmall {
+    /* PLACEHOLDER */
+  }
+
+  @mixin atMedium {
+    /* PLACEHOLDER */
+  }
+
+  @mixin atLarge {
+    /* PLACEHOLDER */
+  }
+
+  @mixin atXLarge {
+    /* PLACEHOLDER */
+  }
+}

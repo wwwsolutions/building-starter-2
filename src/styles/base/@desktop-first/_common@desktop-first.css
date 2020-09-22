@@ -1,0 +1,45 @@
+/* @DESKTOP-FIRST-STRATEGY
+
+  > WARNING!
+  > ORDER OF BREAKPOINTS IS IMPORTANT!
+
+    [default]
+    ...
+    atXLarge
+    atLarge
+    atMedium
+    atSmall
+
+*/
+
+::selection {
+  /*
+  background-color: $color-primary;
+  background-color: var(--color-primary);
+  color: $color-white;
+  color: var(--color-white);
+  */
+}
+
+body {
+
+  background-image: resolve("favicon.png");
+
+  /* PLACEHOLDER */
+
+  @mixin atXLarge {
+    /* PLACEHOLDER */
+  }
+
+  @mixin atLarge {
+    /* PLACEHOLDER */
+  }
+
+  @mixin atMedium {
+    /* PLACEHOLDER */
+  }
+
+  @mixin atSmall {
+    /* PLACEHOLDER */
+  }
+}
